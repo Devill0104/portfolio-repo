@@ -1,55 +1,4 @@
-// import express from 'express';
-// import bodyParser from 'body-parser';
-// import cors from 'cors';
-// import nodemailer from 'nodemailer';
-// import dotenv from 'dotenv';
 
-// dotenv.config();
-// const app = express();
-
-// app.use(cors());
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-
-// app.post("/send-email", async (req, res) => {
-//   const { name, email, subject, message } = req.body;
-
-//   const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: process.env.APP_EMAIL,
-//       pass: process.env.APP_PASSWORD,
-//     },
-//   });
-
-//   const emailContent = `
-//     <h3>Contact Form Submission</h3>
-//     <p><strong>Name:</strong> ${name}</p>
-//     <p><strong>Email:</strong> ${email}</p>
-//     <p><strong>Subject:</strong> ${subject}</p>
-//     <p><strong>Message:</strong></p>
-//     <p>${message}</p>
-//   `;
-
-//   try {
-//     const info = await transporter.sendMail({
-//       from: `"${name}" <${email}>`,
-//       to: "adityamaurya532@gmail.com",
-//       subject: `New Message from: ${name}`,
-//       html: emailContent,
-//     });
-//     console.log("Message sent: %s", info.messageId);
-//     res.status(200).send("Email sent successfully!");
-//   } catch (error) {
-//     console.error("Error sending email: ", error);
-//     res.status(500).send("Error sending email.");
-//   }
-// });
-
-// app.listen(8000, () => console.log("✅ Server running on http://localhost:8000"));
-// app.get('/' , (req, res)=>{
-//     res.send("server is fine")
-// })
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -60,6 +9,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors());
+app.use(cors({
+  origin: "",
+  credentials: true
+}))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
