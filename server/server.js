@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(cors({
-  origin: "",
+  origin: "https://portfolio-frontend-m5ve.onrender.com/",
   credentials: true
 }))
 app.use(bodyParser.urlencoded({ extended: false }));
