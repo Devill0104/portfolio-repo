@@ -22,7 +22,7 @@ const ContactForm = () => {
     
     // Send data to the server
     try {
-      const res = await fetch('`${url}/send-email', {
+      const res = await fetch(`${url}/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
