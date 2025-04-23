@@ -8,7 +8,7 @@ const ContactForm = () => {
     message: '',
   });
 
-  const url = import.meta.env.API_URL;
+  const url = process.env.API_URL;
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
