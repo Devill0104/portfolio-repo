@@ -52,5 +52,8 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-
+app.get("/test", (req, res)=>{
+  console.log("server is running");
+  res.send("successfull testing");
+})
 app.listen(8000, () => console.log("✅ Server running on http://localhost:8000"));
