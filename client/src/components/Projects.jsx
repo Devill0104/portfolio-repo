@@ -24,7 +24,7 @@ const Projects = () => {
           opacity: 1,
           scrollTrigger: {
             trigger: element, 
-            start: 'top 80%', 
+            start: 'top 90%', 
             end: 'top 20%', 
             scrub: true, 
             toggleActions: 'play none none none', 
