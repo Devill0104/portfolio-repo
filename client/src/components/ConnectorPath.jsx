@@ -25,6 +25,7 @@ const ConnectorPath = () => {
         trigger: containerRef.current,
         start: 'top 90%',
         toggleActions: 'play none none none',
+        scrub: 1
       },
     });
   }, []);
