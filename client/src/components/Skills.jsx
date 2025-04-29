@@ -52,33 +52,35 @@ const Skills = () => {
     const [icons3, labels3] = animateRows(row3Ref);
 
     const tl = gsap.timeline({
+      ease:'power1.out',
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top 50%',
         end: 'top 20%',
-        toggleActions: 'play none none none'
-      }
+        toggleActions: 'play none reverse none', 
+       
+       }
     });
 
     tl.to([icons1, labels1], {
       opacity: 1,
       x: 0,
-      stagger: 0.1,
-      duration: 0.2,
+      stagger: 0.05,
+      duration: 0.15,
       ease: 'power1.out'
     })
     .to([icons2, labels2], {
       opacity: 1,
       x: 0,
-      stagger: 0.1,
-      duration: 0.2,
+      stagger: 0.05,
+      duration: 0.15,
       ease: 'power1.out'
     }, '+=0.2')
     .to([icons3, labels3], {
       opacity: 1,
       x: 0,
-      stagger: 0.1,
-      duration: 0.2,
+      stagger: 0.05,
+      duration: 0.15,
       ease: 'power1.out'
     }, '+=0.2');
   }, []);
